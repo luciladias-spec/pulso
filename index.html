@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Vender Retaguarda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+:root{
+  --ground:#F3F1EB;
+  --surface:#FBFAF6;
+  --surface-2:#E7E4DA;
+  --ink:#1A1F2E;
+  --ink-2:#4B5367;
+  --ink-3:#7C8498;
+  --rule:#D6D2C6;
+  --rule-2:#BEB8A8;
+  --brass:#8C5A2B;
+  --brass-soft:#F0E4D4;
+  --verde:#2C5A4E;
+  --verde-soft:#DCE8E3;
+  --alerta:#9A3521;
+  --alerta-soft:#F6E0D9;
+  --shadow:0 1px 0 rgba(26,31,46,.04), 0 10px 30px -20px rgba(26,31,46,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#13161F; --surface:#1B1F2B; --surface-2:#242937;
+    --ink:#EDEAE2; --ink-2:#B4BAC7; --ink-3:#848B9C;
+    --rule:#2C3140; --rule-2:#3D4455;
+    --brass:#D29A5C; --brass-soft:#2E2318;
+    --verde:#7FBFAC; --verde-soft:#17302A;
+    --alerta:#E08A72; --alerta-soft:#331A14;
+    --shadow:0 1px 0 rgba(0,0,0,.3), 0 12px 34px -22px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#13161F; --surface:#1B1F2B; --surface-2:#242937;
+  --ink:#EDEAE2; --ink-2:#B4BAC7; --ink-3:#848B9C;
+  --rule:#2C3140; --rule-2:#3D4455;
+  --brass:#D29A5C; --brass-soft:#2E2318;
+  --verde:#7FBFAC; --verde-soft:#17302A;
+  --alerta:#E08A72; --alerta-soft:#331A14;
+  --shadow:0 1px 0 rgba(0,0,0,.3), 0 12px 34px -22px rgba(0,0,0,.9);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--ground);color:var(--ink);
+  font-family:Karla,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.62;margin:0;padding:0 22px 110px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto}
+.col{max-width:66ch}
+.tagline{font-size:11.5px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--brass)}
+
+/* ---- capa ---- */
+header{padding:60px 0 44px;border-bottom:2px solid var(--ink)}
+h1{
+  font-family:Fraunces,Georgia,serif;font-weight:700;
+  font-size:clamp(3.4rem,13vw,8rem);line-height:.88;letter-spacing:-.04em;
+  margin:.14em 0 .18em;font-variation-settings:"opsz" 144;
+}
+.promessa{
+  font-family:Fraunces,Georgia,serif;font-weight:600;
+  font-size:clamp(1.5rem,4.4vw,2.9rem);line-height:1.14;letter-spacing:-.022em;
+  max-width:19ch;margin:0 0 26px;text-wrap:balance;
+}
+.promessa b{color:var(--brass);font-weight:600}
+.fitas{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 4px}
+.fita{
+  background:var(--ink);color:var(--ground);font-size:11.5px;font-weight:700;
+  letter-spacing:.13em;text-transform:uppercase;padding:7px 13px;border-radius:2px;
+}
+.fita.aberta{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:5px 11px}
+
+/* ---- seções ---- */
+section{padding-top:66px}
+h2{
+  font-family:Fraunces,Georgia,serif;font-weight:600;
+  font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.12;letter-spacing:-.022em;
+  margin:.1em 0 .55em;text-wrap:balance;
+}
+h3{font-family:Karla,sans-serif;font-weight:700;font-size:1.02rem;margin:2em 0 .5em}
+p{margin:0 0 1.05em}
+a{color:var(--brass);text-underline-offset:2px}
+a:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+strong{font-weight:700}
+ul,ol{margin:0 0 1.05em;padding-left:1.2em}
+li{margin-bottom:.46em}
+li::marker{color:var(--ink-3)}
+.lede{font-size:1.1rem;color:var(--ink-2);max-width:60ch}
+
+/* ---- esteira do que fazemos ---- */
+.esteira{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:0 0 1.4em}
+.passo{background:var(--surface);padding:17px 22px;display:grid;grid-template-columns:30px 1fr;gap:16px;align-items:start}
+.passo .n{
+  font-family:Fraunces,Georgia,serif;font-weight:700;font-size:1.05rem;
+  color:var(--brass);line-height:1.5;font-variant-numeric:tabular-nums;
+}
+.passo b{display:block;margin-bottom:2px}
+.passo span{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+
+/* ---- a linha ---- */
+.linha{display:grid;grid-template-columns:1fr auto 1fr;margin:0 0 1.5em;align-items:stretch}
+.lado{padding:26px 30px}
+.lado.frente{background:var(--surface);border:1px solid var(--rule);border-right:0;border-radius:4px 0 0 4px}
+.lado.tras{background:var(--verde-soft);border:1px solid var(--rule);border-left:0;border-radius:0 4px 4px 0}
+.divisor{width:3px;background:var(--ink);position:relative}
+.divisor span{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(90deg);
+  background:var(--ground);color:var(--ink);padding:5px 12px;font-size:10px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;border:2px solid var(--ink);border-radius:2px;
+}
+.lado h4{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px;color:var(--ink-3)}
+.lado.tras h4{color:var(--verde)}
+.lado .quem{display:block;font-family:Fraunces,Georgia,serif;font-size:1.25rem;font-weight:600;margin-bottom:10px;letter-spacing:-.01em}
+.lado.tras .quem{color:var(--verde)}
+.lado ul{list-style:none;padding:0;margin:0}
+.lado li{margin:0;padding:9px 0;border-bottom:1px solid var(--rule);font-size:14.5px;line-height:1.45}
+.lado li:last-child{border-bottom:0}
+
+/* ---- blocos ---- */
+.caixa{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--brass);padding:22px 26px;border-radius:0 4px 4px 0;margin:0 0 1.3em;box-shadow:var(--shadow)}
+.caixa:last-child{margin-bottom:0}
+.caixa p:last-child,.caixa ul:last-child{margin-bottom:0}
+.caixa .rotulo{display:block;font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--brass);margin-bottom:9px}
+.caixa.ok{border-left-color:var(--verde)}
+.caixa.ok .rotulo{color:var(--verde)}
+.caixa.nao{border-left-color:var(--alerta)}
+.caixa.nao .rotulo{color:var(--alerta)}
+
+/* ---- prova ---- */
+.prova{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:0 0 1.4em}
+.p-item{background:var(--surface);padding:20px 18px}
+.p-item b{display:block;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:2.3rem;line-height:1;letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.p-item.mau b{color:var(--alerta)}
+.p-item.bom b{color:var(--verde)}
+.p-item i{display:block;font-style:normal;margin-top:8px;font-size:12.5px;line-height:1.4;color:var(--ink-3)}
+
+/* ---- calculadora ---- */
+.calc{background:var(--ink);color:var(--ground);border-radius:5px;padding:32px 34px;margin:0 0 1.3em}
+.calc .rotulo{display:block;font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+.calc-in label{display:block;font-size:13px;color:#BEB8A8;margin-bottom:9px;letter-spacing:.02em}
+.calc-campo{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.calc-campo input[type=number]{
+  font-family:Fraunces,Georgia,serif;font-weight:700;font-size:2.4rem;width:5.2ch;
+  background:transparent;color:var(--ground);border:0;border-bottom:3px solid var(--brass);
+  padding:0 0 3px;text-align:center;font-variant-numeric:tabular-nums;-moz-appearance:textfield;
+}
+.calc-campo input[type=number]::-webkit-outer-spin-button,
+.calc-campo input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.calc-campo input[type=range]{flex:1;min-width:180px;accent-color:#D29A5C;height:4px}
+.calc-campo .un{font-size:13.5px;color:#BEB8A8}
+
+.calc-out{margin-top:28px;border-top:1px solid #3D4455;padding-top:4px}
+.linha-out{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:baseline;padding:11px 0;border-bottom:1px solid #2C3140}
+.linha-out .oque{font-size:14.5px}
+.linha-out .oque em{font-style:normal;color:#848B9C;font-size:12.5px;display:block;line-height:1.4}
+.linha-out .qt{font-size:14.5px;color:#BEB8A8;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.linha-out .vl{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.15rem;font-variant-numeric:tabular-nums;text-align:right;min-width:7.5ch;white-space:nowrap}
+.linha-out.total{border-bottom:0;border-top:2px solid var(--brass);margin-top:6px;padding-top:16px}
+.linha-out.total .oque{font-family:Fraunces,Georgia,serif;font-size:1.2rem;font-weight:600}
+.linha-out.total .vl{font-size:1.9rem;color:#D29A5C;letter-spacing:-.02em}
+.calc-nota{margin:20px 0 0;font-size:12.5px;line-height:1.55;color:#848B9C}
+.calc-nota strong{color:#BEB8A8}
+
+/* ---- tabelas ---- */
+.tabela-wrap{overflow-x:auto;margin:0 0 1.4em;border:1px solid var(--rule);border-radius:4px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2);border-bottom:1px solid var(--rule-2)}
+tbody tr:last-child td{border-bottom:none}
+td.v,th.v{font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+tbody tr.destaque td{background:var(--brass-soft)}
+
+/* ---- objeções ---- */
+.obj{display:grid;gap:12px;margin:0 0 1.4em}
+.o{background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:20px 24px}
+.o .fala{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:1.14rem;line-height:1.4;margin:0 0 12px}
+.o .fala::before{content:"“"}
+.o .fala::after{content:"”"}
+.o .resp{margin:0;font-size:14.5px;line-height:1.56;color:var(--ink-2)}
+.o .resp strong{color:var(--ink)}
+.o .nota{margin:11px 0 0;padding-top:11px;border-top:1px solid var(--rule);font-size:12.5px;color:var(--ink-3);line-height:1.5}
+
+/* ---- script ---- */
+.script{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--ink);border-radius:0 4px 4px 0;padding:26px 30px;margin:0 0 1.2em}
+.script .rotulo{display:block;font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--brass);margin-bottom:14px}
+.script p{font-family:Fraunces,Georgia,serif;font-size:1.14rem;line-height:1.5;margin:0 0 .8em}
+.script p:last-child{margin-bottom:0}
+.script .acao{font-family:Karla,sans-serif;font-size:13.5px;color:var(--ink-3);font-style:italic;line-height:1.5}
+
+footer{margin-top:76px;padding-top:26px;border-top:2px solid var(--ink);font-size:12.5px;color:var(--ink-3);line-height:1.7}
+
+@media (max-width:720px){
+  body{font-size:16px;padding:0 16px 80px}
+  .linha{grid-template-columns:1fr}
+  .lado.frente{border-right:1px solid var(--rule);border-radius:4px 4px 0 0}
+  .lado.tras{border-left:1px solid var(--rule);border-radius:0 0 4px 4px}
+  .divisor{width:auto;height:3px}
+  .divisor span{transform:translate(-50%,-50%)}
+  .calc{padding:24px 20px}
+  .linha-out{grid-template-columns:1fr auto;gap:6px 12px}
+  .linha-out .qt{grid-column:1;font-size:12.5px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="tagline">Produto novo · material de venda · 16 out 2026</span>
+  <h1>Retaguarda</h1>
+  <p class="promessa">Da procuração ao protocolo, <b>o escritório anda sozinho.</b></p>
+  <div class="fitas">
+    <span class="fita">24 horas por dia</span>
+    <span class="fita">7 dias por semana</span>
+    <span class="fita">Sem aumentar a folha</span>
+    <span class="fita aberta">Só no pacote Soberano</span>
+  </div>
+</header>
+
+<section class="col">
+  <h2>A frase que abre a conversa</h2>
+  <p class="lede"><strong>Depois que o cliente assina a procuração, a Facilita faz o resto.</strong> Pegamos os documentos onde o advogado já os deixa, cadastramos, escrevemos a peça, organizamos tudo no formato do tribunal, distribuímos ou protocolamos, acompanhamos as publicações todos os dias e damos qualquer andamento que o processo pedir — guia, RPV, manifestação, recurso.</p>
+  <p>O advogado entra em dois momentos: para conferir a peça e para autorizar o protocolo. Dois cliques. O resto do dia dele volta a ser dele.</p>
+</section>
+
+<section>
+  <div class="col"><h2>O que a Facilita faz</h2>
+  <p class="lede">Esta é a lista que vocês devem decorar. É o produto inteiro, na ordem em que acontece.</p></div>
+
+  <div class="esteira">
+    <div class="passo"><span class="n">1</span><div><b>Capta os documentos</b><span>Pegamos o que ele colheu do cliente, de onde ele já deixa — pasta no Drive, OneDrive ou o WhatsApp da Facilita. Ele não organiza nada.</span></div></div>
+    <div class="passo"><span class="n">2</span><div><b>Cadastra na plataforma</b><span>A solicitação é aberta por nós. Ele não preenche formulário.</span></div></div>
+    <div class="passo"><span class="n">3</span><div><b>Escreve a peça</b><span>Inicial, contestação, manifestação, recurso, parecer, cálculo. A mesma esteira que ele já conhece.</span></div></div>
+    <div class="passo"><span class="n">4</span><div><b>Organiza os documentos</b><span>Na ordem e no formato que aquele tribunal exige — separados, nomeados e dentro do limite de tamanho dele.</span></div></div>
+    <div class="passo"><span class="n">5</span><div><b>Verifica pendência e encaminha</b><span>Se falta documento para instruir o caso, dizemos exatamente qual, em qual processo e como resolver — e cobramos até chegar.</span></div></div>
+    <div class="passo"><span class="n">6</span><div><b>Distribui ou protocola</b><span>No nome dele, com o certificado dele, depois da autorização dele. Volta com número e comprovante.</span></div></div>
+    <div class="passo"><span class="n">7</span><div><b>Acompanha as publicações</b><span>Todo dia. Lemos, dizemos o que o juiz mandou fazer e até quando — com o prazo lido de dentro do processo, nunca calculado.</span></div></div>
+    <div class="passo"><span class="n">8</span><div><b>Dá qualquer andamento</b><span>Providencia a guia, cadastra o RPV, cumpre a diligência, peticiona o que o processo pedir. Não para na peça.</span></div></div>
+    <div class="passo"><span class="n">9</span><div><b>Avisa e relata</b><span>Audiência e perícia no WhatsApp do escritório. Relatório no fim do dia com tudo o que andou e o que vence a seguir.</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="col"><h2>A linha</h2>
+  <p class="lede">Desenhe isto na frente dele. De um lado, o que só ele pode fazer. Do outro, tudo o que hoje come o dia dele sem precisar.</p></div>
+
+  <div class="linha">
+    <div class="lado frente">
+      <h4>Fica com ele</h4>
+      <span class="quem">O fronte</span>
+      <ul>
+        <li>Captar e atender o cliente</li>
+        <li>Decidir a estratégia do caso</li>
+        <li>Audiência e sustentação oral</li>
+        <li>Conferir a peça e autorizar o protocolo</li>
+        <li>Assinar — tudo sai no nome dele</li>
+      </ul>
+    </div>
+    <div class="divisor"><span>Retaguarda</span></div>
+    <div class="lado tras">
+      <h4>Passa para a Facilita</h4>
+      <span class="quem">A retaguarda</span>
+      <ul>
+        <li>Captar e cadastrar os documentos</li>
+        <li>Escrever a peça</li>
+        <li>Organizar os anexos no padrão do tribunal</li>
+        <li>Distribuir e protocolar</li>
+        <li>Ler as publicações todos os dias</li>
+        <li>Achar o prazo real dentro dos autos</li>
+        <li>Guia, RPV, diligência, andamento</li>
+        <li>Cobrar a pendência até resolver</li>
+        <li>Avisar audiência e perícia</li>
+        <li>Relatar o dia</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="col">
+  <h2>A âncora: ele já tem quem faça. Não dá conta.</h2>
+  <p class="lede">Este é o centro da venda, e o lugar onde quase todo vendedor erra.</p>
+  <p><strong>Não venda substituição de equipe.</strong> Advogado com escritório montado tem secretária, estagiário, às vezes um bacharel. Ele gosta deles e não vai demitir ninguém para comprar software. Se você entrar por aí, ele fecha a porta.</p>
+  <p><strong>Venda capacidade.</strong> O problema que ele confessa não é falta de gente — é que <strong>a gente que tem não dá conta do volume</strong>. A publicação chega e fica sem leitura. É lida e fica sem cumprimento, porque ninguém teve tempo. O processo anda sozinho até parar. E a saída óbvia, contratar mais um, é a que ele menos quer: <strong>folha de pagamento, encargos, treinar de novo, e a pessoa que adoece ou pede demissão no pior mês.</strong></p>
+
+  <div class="caixa">
+    <span class="rotulo">A pergunta que abre tudo</span>
+    <p>“Hoje, quem lê suas publicações?” — e depois, qualquer que seja a resposta: <strong>“e essa pessoa está dando conta?”</strong></p>
+    <p>Nunca ouvimos um sim. É essa frase que faz o cliente descrever o problema com as palavras dele, e o resto da conversa fica fácil.</p>
+  </div>
+
+  <div class="caixa ok">
+    <span class="rotulo">A promessa, em uma linha</span>
+    <p><strong>O Retaguarda é capacidade sem folha de pagamento.</strong> A equipe dele continua — e para de se afogar. Nós pegamos o volume repetitivo que nunca cabe no dia, 24 horas por dia, 7 dias por semana, sem férias, sem atestado e sem rotatividade.</p>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <h2>A prova, e ela é real</h2>
+    <p class="lede">Rodamos a triagem de 30 dias no primeiro escritório antes de vender para o segundo. Números medidos, não estimados — e ele tinha equipe.</p>
+  </div>
+
+  <div class="prova">
+    <div class="p-item"><b>166</b><i>publicações em 30 dias</i></div>
+    <div class="p-item"><b>101</b><i>processos com movimentação</i></div>
+    <div class="p-item mau"><b>31</b><i>exigiam um ato dele</i></div>
+    <div class="p-item mau"><b>5</b><i>processos perdidos no mês</i></div>
+    <div class="p-item bom"><b>11</b><i>vitórias que ele ainda não sabia que tinha</i></div>
+  </div>
+
+  <div class="col">
+    <div class="caixa nao">
+      <span class="rotulo">O argumento mais forte que temos</span>
+      <p>Em trinta dias, esse escritório teve <strong>três petições iniciais indeferidas e dois processos arquivados</strong>. Emenda não cumprida, comprovante de endereço não juntado, procuração não regularizada.</p>
+      <p><strong>Nenhum perdeu no mérito. Perdeu porque a publicação não foi lida — ou foi lida e não cumprida, por falta de tempo.</strong></p>
+      <p>É isso que o Retaguarda impede. Não é “nós protocolamos para você” — é <strong>“nós não deixamos seu processo morrer por um comprovante de residência”</strong>.</p>
+    </div>
+    <div class="caixa ok">
+      <span class="rotulo">E o outro lado da mesma moeda</span>
+      <p>No mesmo mês ele ganhou <strong>duas apelações no TRF1</strong>, teve um benefício assistencial concedido com liminar e <strong>um pagamento já depositado esperando ele sacar</strong>. Publicação sem leitura não é só prazo perdido — é dinheiro parado e boa notícia que o cliente dele não recebe.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col"><h2>Preço</h2>
+  <p class="lede">Tudo debitado do pacote Soberano. Não há mensalidade nova e não há fatura à parte — o que muda é o consumo do pacote que ele já tem.</p></div>
+
+  <div class="tabela-wrap">
+    <table>
+      <thead><tr><th>Item</th><th class="v">Valor</th><th>Como cobra</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Configuração do escritório</strong></td><td class="v">R$ 1.500</td><td>Uma única vez. Certificado no cofre, conexão com os tribunais, captura das publicações e agente no WhatsApp</td></tr>
+        <tr><td><strong>Publicação triada</strong></td><td class="v">R$ 10,00</td><td>Por publicação lida e classificada</td></tr>
+        <tr><td><strong>Processo acompanhado</strong></td><td class="v">R$ 10,00</td><td>Por processo com movimentação, por mês</td></tr>
+        <tr><td><strong>Protocolo ou distribuição</strong></td><td class="v">R$ 5,00</td><td>Por ato protocolado</td></tr>
+        <tr><td><strong>Peças, pareceres e cálculos</strong></td><td class="v">tabela</td><td>Preço normal do pacote, sem mudança — ele já pagaria por isso de qualquer forma</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="caixa">
+      <span class="rotulo">Leia antes de falar número</span>
+      <p>O que o Retaguarda acrescenta ao consumo dele são <strong>três linhas: triagem, acompanhamento e protocolo</strong>. As peças que saírem daí já estavam no pacote — ele as encomendaria de qualquer jeito quando descobrisse o prazo. <strong>Deixe isso explícito</strong>, ou o cliente soma tudo e acha que o produto custa o dobro.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <h2>Calculadora</h2>
+    <p class="lede">Quanto o Retaguarda consome do pacote por mês, a partir do tamanho da carteira. As proporções vêm do escritório-piloto, medidas em 30 dias reais.</p>
+  </div>
+
+  <div class="calc">
+    <span class="rotulo">Estimativa mensal de consumo</span>
+    <div class="calc-in">
+      <label for="qtd">Processos ativos na carteira do escritório</label>
+      <div class="calc-campo">
+        <input type="number" id="qtd" value="500" min="20" max="3000" step="10" aria-label="Processos ativos">
+        <input type="range" id="slider" value="500" min="20" max="3000" step="10" aria-label="Ajustar processos ativos">
+        <span class="un">processos</span>
+      </div>
+    </div>
+
+    <div class="calc-out">
+      <div class="linha-out">
+        <span class="oque">Publicações triadas<em>22,7 por 100 processos ativos ao mês</em></span>
+        <span class="qt" id="q1">—</span>
+        <span class="vl" id="v1">—</span>
+      </div>
+      <div class="linha-out">
+        <span class="oque">Processos acompanhados<em>16,8 por 100 processos ativos ao mês</em></span>
+        <span class="qt" id="q2">—</span>
+        <span class="vl" id="v2">—</span>
+      </div>
+      <div class="linha-out">
+        <span class="oque">Protocolos e distribuições<em>5,2 por 100 processos ativos ao mês</em></span>
+        <span class="qt" id="q3">—</span>
+        <span class="vl" id="v3">—</span>
+      </div>
+      <div class="linha-out total">
+        <span class="oque">Por mês</span>
+        <span class="qt"></span>
+        <span class="vl" id="vt">—</span>
+      </div>
+    </div>
+
+    <p class="calc-nota"><strong>Fora disso:</strong> R$ 1.500 de configuração, uma única vez. E as peças que a triagem gerar, no preço normal do pacote — essas ele já pagaria de qualquer forma.</p>
+  </div>
+
+  <div class="col">
+    <h3>Referências rápidas, para não precisar da calculadora na ligação</h3>
+  </div>
+
+  <div class="tabela-wrap">
+    <table>
+      <thead><tr><th>Carteira</th><th class="v">Publicações</th><th class="v">Processos</th><th class="v">Protocolos</th><th class="v">Por mês</th></tr></thead>
+      <tbody>
+        <tr><td>100 processos</td><td class="v">23</td><td class="v">17</td><td class="v">5</td><td class="v">R$ 425</td></tr>
+        <tr><td>250 processos</td><td class="v">57</td><td class="v">42</td><td class="v">13</td><td class="v">R$ 1.055</td></tr>
+        <tr class="destaque"><td><strong>500 processos</strong></td><td class="v">113</td><td class="v">84</td><td class="v">26</td><td class="v">R$ 2.100</td></tr>
+        <tr><td>600 processos <em style="color:var(--ink-3);font-style:normal;font-size:12px">(o piloto, real)</em></td><td class="v">136</td><td class="v">101</td><td class="v">31</td><td class="v">R$ 2.525</td></tr>
+        <tr><td>1.000 processos</td><td class="v">227</td><td class="v">168</td><td class="v">52</td><td class="v">R$ 4.210</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="caixa">
+      <span class="rotulo">Como usar isso na conversa</span>
+      <p>Um escritório de <strong>500 processos ativos</strong> consome <strong>cerca de R$ 2.100 por mês</strong> em triagem, acompanhamento e protocolo. Diga o número e pare. Se ele achar alto, a próxima frase não é desconto — é a pergunta: <strong>“e hoje, quanto custa a pessoa que deveria estar fazendo isso, somando salário, encargos e o mês em que ela falta?”</strong></p>
+      <p>Lembre que esse valor <strong>não é cobrança nova</strong>: sai do pacote Soberano que ele já contratou.</p>
+    </div>
+    <p style="font-size:13.5px;color:var(--ink-3);line-height:1.55">As proporções saem de um escritório previdenciário com 600 processos ativos, medido entre 16/09 e 16/10/2026. Carteira trabalhista tende a publicar mais; carteira cível, menos. <strong>Trate como estimativa e confirme com a triagem real</strong> antes de prometer valor.</p>
+  </div>
+</section>
+
+<section class="col">
+  <h2>Para quem oferecer</h2>
+  <div class="caixa ok">
+    <span class="rotulo">Ofereça quando ouvir</span>
+    <p>“Eu capto bem, o problema é dar conta.” · “Minha equipe não vence.” · “Tenho processo parado que eu nem sei em que pé está.” · “Já perdi prazo.” · “Fico o dia inteiro no sistema do tribunal.” · “Tenho caso pronto para distribuir há meses.” · “Perdi meu assistente.”</p>
+  </div>
+  <div class="caixa nao">
+    <span class="rotulo">Segure quando</span>
+    <p>O volume é baixo demais. Advogado com vinte processos ativos não sente a dor que o produto cura e vai achar caro por publicação — para ele, venda a esteira de peças, que é o que resolve. <strong>Ter equipe não desqualifica ninguém:</strong> o piloto tem equipe, e é justamente por ela não vencer que ele comprou.</p>
+  </div>
+  <p><strong>Perfil ideal:</strong> advogado ou banca pequena com <strong>carteira de 100 processos para cima</strong>, forte em captação, com gargalo confessado na execução. Previdenciário e trabalhista sofrem mais, porque o volume de publicações é alto e repetitivo.</p>
+</section>
+
+<section class="col">
+  <h2>As seis objeções que vão aparecer</h2>
+  <div class="obj">
+    <div class="o">
+      <p class="fala">Vou ter que entregar meu certificado digital para vocês?</p>
+      <p class="resp">O certificado fica num <strong>cofre digital com senha, e continua sendo dele</strong> — pode revogar a qualquer hora, sozinho, sem falar com ninguém. Todo protocolo sai no nome do advogado responsável pela causa, nunca no nosso. E o mais importante: <strong>ele continua entrando no tribunal normalmente, pelo aplicativo dele.</strong> Nada no dia a dia do escritório muda.</p>
+      <p class="nota">É a objeção que mais mata venda. Trate antes que ele pergunte — quem esconde o assunto cria desconfiança.</p>
+    </div>
+    <div class="o">
+      <p class="fala">E se vocês perderem meu prazo?</p>
+      <p class="resp">Três respostas, nessa ordem. <strong>O prazo nunca é calculado por nós</strong> — é lido dentro do processo, onde o próprio tribunal gravou a data final. <strong>Só assumimos o que ainda tem prazo hábil com folga</strong>: chegando em cima da hora, recusamos e avisamos, em vez de arriscar. E <strong>o protocolo só sai depois que ele autoriza</strong> — a decisão final é dele, registrada com data e hora.</p>
+    </div>
+    <div class="o">
+      <p class="fala">A OAB permite isso?</p>
+      <p class="resp">Permite, e o desenho é exatamente para isso. Entregamos uma <strong>minuta</strong>; quem revisa, aprova e autoriza é o advogado. O protocolo só sai do clique dele. <strong>Nós não exercemos advocacia e não assinamos nada</strong> — somos estrutura, como o contador ou o sistema de gestão dele.</p>
+    </div>
+    <div class="o">
+      <p class="fala">Eu já assino o Jus Brasil, já recebo as publicações.</p>
+      <p class="resp">Receber a publicação é o fácil — nós fazemos isso de graça, direto do diário oficial. <strong>O problema dele nunca foi receber, foi o que vem depois:</strong> ler, entender o que o juiz mandou fazer, descobrir até quando, escrever a peça e protocolar. O Jus Brasil entrega o aviso e para aí. <strong>Pergunte quantas publicações estão não lidas na caixa dele agora.</strong></p>
+      <p class="nota">Dado útil: no piloto, <strong>56% das publicações do tribunal estadual chegam sem o conteúdo</strong> — só o aviso de que algo aconteceu. Nós abrimos o processo para descobrir o quê. Nenhum serviço de publicação faz isso.</p>
+    </div>
+    <div class="o">
+      <p class="fala">Quanto fica por mês?</p>
+      <p class="resp">Não há valor fixo novo: <strong>sai do pacote Soberano que ele já tem.</strong> Use a calculadora com a carteira dele e dê o número de uma vez — cerca de R$ 2.100 para 500 processos. Deixe claro que as peças já estavam no pacote.</p>
+    </div>
+    <div class="o">
+      <p class="fala">Vocês atendem o meu tribunal?</p>
+      <p class="resp">Para <strong>ler publicações e acompanhar prazos, atendemos o Brasil inteiro</strong> — a fonte é nacional. Para <strong>protocolar</strong>, a cobertura ainda cresce tribunal a tribunal. <strong>Confirme com o time antes de prometer.</strong> Se o dele ainda não estiver pronto, venda a triagem e as peças agora e o protocolo quando entrar. Protocolo prometido e não entregue destrói a confiança neste produto.</p>
+    </div>
+  </div>
+</section>
+
+<section class="col">
+  <h2>O que não prometer</h2>
+  <div class="caixa nao">
+    <span class="rotulo">Limites honestos</span>
+    <ul>
+      <li><strong>Não prometa cobertura total de protocolo.</strong> Está em construção. Pergunte antes de afirmar.</li>
+      <li><strong>Não prometa prazo recuperado.</strong> O que venceu antes de entrarmos, analisamos e dizemos o que ainda cabe — sem garantir reverter.</li>
+      <li><strong>Não diga que ele não precisa olhar mais nada.</strong> Ele confere a peça e autoriza o protocolo. É exigência da OAB e é o que protege os dois.</li>
+      <li><strong>Não sugira demitir ninguém.</strong> O produto é capacidade, não corte. Quem levanta esse assunto é o cliente, nunca nós.</li>
+      <li><strong>Não prometa data de implantação apertada.</strong> O escritório entra em operação depois da configuração, que depende do certificado digital dele chegar.</li>
+      <li><strong>Não cite o nome de outro cliente.</strong> Os números desta página são internos. Diga “um escritório previdenciário em Goiás”.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="col">
+  <h2>Como conduzir a conversa</h2>
+
+  <div class="script">
+    <span class="rotulo">Abertura</span>
+    <p>“Doutor, hoje quem lê as suas publicações? … E essa pessoa está dando conta?”</p>
+    <p class="acao">Deixe ele descrever o problema inteiro antes de falar da solução. Quanto mais ele falar, menos você precisa argumentar.</p>
+  </div>
+
+  <div class="script">
+    <span class="rotulo">A virada</span>
+    <p>“A gente lançou um serviço novo chamado Retaguarda. <strong>Depois que o cliente assina a procuração, a gente faz o resto</strong> — pega os documentos, cadastra, escreve a peça, organiza os anexos, distribui ou protocola, lê as publicações todo dia e dá qualquer andamento que o processo pedir. O senhor entra em dois momentos: para conferir a peça e para autorizar o protocolo.”</p>
+    <p class="acao">Aqui, pare. A primeira pergunta dele diz qual objeção tratar.</p>
+  </div>
+
+  <div class="script">
+    <span class="rotulo">O número</span>
+    <p>“Com a sua carteira, isso consome por volta de <strong>R$ 2.100 por mês do seu pacote</strong> — e não é cobrança nova, sai do Soberano que o senhor já tem. Funciona 24 horas por dia, 7 dias por semana, e a sua equipe continua, só para de se afogar.”</p>
+    <p class="acao">Rode a calculadora com a carteira real dele antes da ligação. Chegar com o número pronto vale mais do que qualquer argumento.</p>
+  </div>
+
+  <div class="script">
+    <span class="rotulo">O fechamento</span>
+    <p>“Me passa o seu número de OAB. <strong>Eu rodo a sua triagem dos últimos 30 dias e te mostro o que está acontecendo nos seus processos agora</strong> — sem compromisso. Se não tiver nada, não tem conversa. Se tiver, a gente fala.”</p>
+    <p class="acao">É o fechamento mais forte do produto e custa quase nada: a consulta é pública e leva minutos. No piloto, revelou cinco processos perdidos e onze vitórias que o próprio advogado não conhecia. É muito difícil dizer não depois de ver a própria carteira na tela.</p>
+  </div>
+</section>
+
+<section class="col">
+  <h2>Antes de ofertar</h2>
+  <ol>
+    <li><strong>Confirme que o cliente é Soberano.</strong> O Retaguarda não está disponível nos outros pacotes nesta fase.</li>
+    <li><strong>Peça a triagem dos 30 dias</strong> com o número da OAB dele, para levar a conversa com o caso na mão.</li>
+    <li><strong>Rode a calculadora</strong> com a carteira dele e leve o número pronto.</li>
+    <li><strong>Confirme a cobertura de protocolo</strong> no tribunal onde ele atua.</li>
+    <li><strong>Alinhe a implantação</strong> antes de prometer data: certificado digital, acesso aos tribunais e inclusão do nosso número no grupo de WhatsApp do escritório.</li>
+  </ol>
+  <p>Dúvida sobre caso específico, fale comigo antes de prometer. O produto é novo e estamos aprendendo com cada escritório — o que vocês ouvirem dos clientes muda o desenho, então me tragam.</p>
+</section>
+
+<footer>
+  Material interno da Facilita Jurídico · 16 de outubro de 2026 · As proporções da calculadora vêm do primeiro escritório atendido, medidas sobre 30 dias de publicações reais. Não cite o nome do cliente fora de casa.
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var POR_PROC = { pub: 136/600, proc: 101/600, prot: 31/600 };
+  var PRECO    = { pub: 10, proc: 10, prot: 5 };
+  var qtd = document.getElementById('qtd');
+  var slider = document.getElementById('slider');
+  function moeda(v){
+    return 'R$ ' + v.toLocaleString('pt-BR', {minimumFractionDigits:0, maximumFractionDigits:0});
+  }
+  function calcular(n){
+    n = Math.max(20, Math.min(3000, Math.round(n) || 0));
+    var pub  = Math.round(n * POR_PROC.pub);
+    var proc = Math.round(n * POR_PROC.proc);
+    var prot = Math.round(n * POR_PROC.prot);
+    var v1 = pub * PRECO.pub, v2 = proc * PRECO.proc, v3 = prot * PRECO.prot;
+    document.getElementById('q1').textContent = pub  + (pub  === 1 ? ' publicação' : ' publicações');
+    document.getElementById('q2').textContent = proc + (proc === 1 ? ' processo'   : ' processos');
+    document.getElementById('q3').textContent = prot + (prot === 1 ? ' ato'        : ' atos');
+    document.getElementById('v1').textContent = moeda(v1);
+    document.getElementById('v2').textContent = moeda(v2);
+    document.getElementById('v3').textContent = moeda(v3);
+    document.getElementById('vt').textContent = moeda(v1 + v2 + v3);
+  }
+  function doInput(){ slider.value = qtd.value; calcular(Number(qtd.value)); }
+  function doSlider(){ qtd.value = slider.value; calcular(Number(slider.value)); }
+  qtd.addEventListener('input', doInput);
+  slider.addEventListener('input', doSlider);
+  calcular(500);
+})();
+</script>
+
+</body>
+</html>
