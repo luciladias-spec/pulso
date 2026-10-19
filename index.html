@@ -157,7 +157,7 @@ li::marker{color:var(--ink-3)}
 .medido .aviso{font-size:12.5px;color:#9FB0CC;border-top:1px solid #2E3D63;padding-top:10px;margin-top:10px}
 .dica{margin:12px 0 0;font-size:12.5px;color:#7E8BA5;line-height:1.5}
 .pac{border:1px solid #223052;border-radius:4px;overflow:hidden;margin:0 0 16px}
-.pacL{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr auto;gap:12px;align-items:baseline;
+.pacL{display:grid;grid-template-columns:1.1fr .9fr .9fr 1.1fr .9fr auto;gap:12px;align-items:baseline;
   background:#121C3A;padding:13px 16px;border-bottom:1px solid #223052;font-size:13.5px}
 .pacL:last-child{border-bottom:0}
 .pacL.cab{background:#19244A;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7E8BA5}
@@ -728,6 +728,7 @@ footer{margin-top:76px;padding-top:26px;border-top:2px solid var(--ink);font-siz
   </div>
 </section>
 
+<!-- INICIO custo-atual -->
 <section>
   <div class="col">
     <h2>Quanto isso já custa hoje</h2>
@@ -884,6 +885,7 @@ footer{margin-top:76px;padding-top:26px;border-top:2px solid var(--ink);font-siz
     </div>
   </div>
 </section>
+<!-- FIM custo-atual -->
 
 <section class="col">
   <h2>Para quem oferecer</h2>
@@ -1058,27 +1060,40 @@ footer{margin-top:76px;padding-top:26px;border-top:2px solid var(--ink);font-siz
     { nome:'Soberano', preco:10000, servicos:142, meses:2  }
   ];
 
+  /* Quanto o Pulso custa por processo ativo ao mês, pelas proporções do piloto.
+     É o que permite dizer até que carteira cada pacote aguenta. */
+  function custoPorProcesso(){
+    return POR100.pub*(PRECO.triagem+PRECO.acomp) + POR100.prot*PRECO.prot;
+  }
+
   function pintarPacotes(custoPulso){
     var linhas = ['<div class="pacL cab"><span>Pacote</span><span>Saldo por mês</span>'
-                + '<span>Pulso</span><span>Sobra para peças</span><span></span></div>'];
-    var ideal = null;
+                + '<span>Pulso</span><span>Sobra ou falta</span><span>Cobre até</span><span></span></div>'];
+    var ideal = null, porProc = custoPorProcesso();
     PACOTES.forEach(function(k){
       var saldo = k.preco / k.meses;
       var porPeca = k.preco / k.servicos;
       var sobra = saldo - custoPulso;
       var cabe  = sobra >= porPeca;          // sobra ao menos uma peça
       if (cabe && !ideal) ideal = k.nome;
+      // maior carteira que ainda deixa uma peça de folga
+      k._cobre = Math.max(0, Math.floor((saldo - porPeca) / porProc));
       k._saldo=saldo; k._sobra=sobra; k._cabe=cabe; k._peca=porPeca;
     });
     PACOTES.forEach(function(k){
       var cls = k._cabe ? 'cabe' : (k._sobra >= 0 ? 'justo' : 'nao');
       var np  = Math.floor(k._sobra/k._peca);
       var txt = k._cabe ? (np + (np===1 ? ' peça' : ' peças')) : (k._sobra >= 0 ? 'não sobra peça' : 'não cabe');
+      // o que o vendedor precisa responder: falta quanto?
+      var col4 = k._sobra >= 0
+        ? '<b>+'+moeda(k._sobra)+'</b>'
+        : '<b style="color:#F08C7E">faltam '+moeda(-k._sobra)+'</b>';
       linhas.push('<div class="pacL'+(k.nome===ideal?' ideal':'')+'">'
         + '<span class="pn">'+k.nome+(k.nome===ideal?' &middot; ideal':'')+'</span>'
         + '<span class="pv"><b>'+moeda(k._saldo)+'</b></span>'
         + '<span class="pv">'+moeda(custoPulso)+'</span>'
-        + '<span class="pv">'+(k._sobra>=0?moeda(k._sobra):'—')+'</span>'
+        + '<span class="pv">'+col4+'</span>'
+        + '<span class="pv">'+(k._cobre ? k._cobre+' proc.' : '—')+'</span>'
         + '<span class="tag '+cls+'">'+txt+'</span></div>');
     });
     document.getElementById('pacotes').innerHTML = linhas.join('');
@@ -1092,7 +1107,11 @@ footer{margin-top:76px;padding-top:26px;border-top:2px solid var(--ink);font-siz
       '<br><br>Saldo por mês = preço do pacote dividido pela validade. Start, Premium e Infinity em 12 meses; '
       + '<b>Soberano em 60 dias</b>, que é como a casa pratica — por isso o saldo mensal dele é tão maior. '
       + 'O que sobra está em reais e em quantas peças cabem, pelo preço por serviço daquele pacote '
-      + '(Start R$ 160, Premium R$ 140, Infinity R$ 120, Soberano R$ 70).';
+      + '(Start R$ 160, Premium R$ 140, Infinity R$ 120, Soberano R$ 70).'
+      + '<br><br><b>Por que o Infinity cobre tão menos que o Soberano?</b> Não é o preço, é a validade. '
+      + 'O Infinity são R$ 8.400 para <b>12 meses</b> — R$ 700 por mês. O Soberano são R$ 10.000 para '
+      + '<b>60 dias</b> — R$ 5.000 por mês. Sete vezes mais saldo mensal por um preço 19% maior. '
+      + 'A coluna <b>Cobre até</b> diz a maior carteira que cada pacote aguenta deixando ainda uma peça de folga.';
   }
 
   function manual(v){ modo='estimado'; qtd.value=v; slider.value=Math.min(3000,Math.max(20,v)); calcular(); }
